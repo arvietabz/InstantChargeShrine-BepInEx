@@ -2,7 +2,7 @@
 using Il2Cpp;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(InstantChargeShrine.MelonLoaderMod.Core), "InstantChargeShrine", "1.0.3", "Slimaeus", null)]
+[assembly: MelonInfo(typeof(InstantChargeShrine.MelonLoaderMod.Core), "InstantChargeShrine", "1.0.4", "Slimaeus", null)]
 [assembly: MelonGame("Ved", "Megabonk")]
 
 namespace InstantChargeShrine.MelonLoaderMod;
