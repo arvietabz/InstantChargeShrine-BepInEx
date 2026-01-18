@@ -13,12 +13,6 @@
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
-	<!-- 
-      REFERENCES: 
-      Now pointing to $(MEGABONK_PROFILE) 
-      (C:\Users\Arvie\AppData\Roaming\r2modmanPlus-local\Megabonk\profiles\Default\BepInEx)
-      because that is where r2modman keeps the Core and Interop files.
-    -->
 	<ItemGroup>
 		<Reference Include="BepInEx.Core">
 			<HintPath>$(MEGABONK_PROFILE)\core\BepInEx.Core.dll</HintPath>
