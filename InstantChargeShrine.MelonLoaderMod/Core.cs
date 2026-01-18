@@ -1,14 +1,23 @@
-﻿using HarmonyLib;
-using Il2Cpp;
-using MelonLoader;
+﻿using BepInEx;
+using BepInEx.Unity.IL2CPP;
+using HarmonyLib;
+//using Il2Cpp; // Keeps reference to the game's IL2CPP domain
 
-[assembly: MelonInfo(typeof(InstantChargeShrine.MelonLoaderMod.Core), "InstantChargeShrine", "1.0.4", "Slimaeus", null)]
-[assembly: MelonGame("Ved", "Megabonk")]
+namespace InstantChargeShrine.BepInExMod;
 
-namespace InstantChargeShrine.MelonLoaderMod;
-
-public class Core : MelonMod
+// GUID, Name, Version
+[BepInPlugin("Slimaeus.InstantChargeShrine", "InstantChargeShrine", "1.0.4")]
+// Optional: Restrict to specific process name (e.g., "Ved.exe" or "Megabonk.exe")
+// [BepInProcess("Megabonk.exe")] 
+public class Core : BasePlugin
 {
+    public override void Load()
+    {
+        // BepInEx requires us to manually initialize Harmony
+        Harmony.CreateAndPatchAll(typeof(ChargeShrinePatches));
+        Log.LogInfo("InstantChargeShrine Loaded successfully!");
+    }
+
     [HarmonyPatch(typeof(ChargeShrine))]
     public static class ChargeShrinePatches
     {
@@ -16,6 +25,7 @@ public class Core : MelonMod
         [HarmonyPostfix]
         public static void Awake_Postfix(ChargeShrine __instance)
         {
+            // Logic remains exactly the same
             __instance.chargeTime = 0f;
             __instance.currentChargeTime = 0f;
         }
