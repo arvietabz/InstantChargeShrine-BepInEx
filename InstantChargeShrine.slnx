@@ -3,9 +3,5 @@
     <File Path="Directory.Build.props" />
     <File Path="README.md" />
   </Folder>
-<<<<<<< HEAD
   <Project Path="InstantChargeShrine.BepInExMod/InstantChargeShrine.BepInExMod.csproj" />
-=======
-  <Project Path="InstantChargeShrine.MelonLoaderMod/InstantChargeShrine.BepInExMod.csproj" />
->>>>>>> 4c8f6aa78c65efa3e40e0dbfdca4c53bd5fac3bc
 </Solution>
