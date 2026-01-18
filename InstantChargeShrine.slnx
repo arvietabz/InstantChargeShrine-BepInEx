@@ -3,5 +3,5 @@
     <File Path="Directory.Build.props" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="InstantChargeShrine.MelonLoaderMod/InstantChargeShrine.BepInExMod.csproj" />
+  <Project Path="InstantChargeShrine.BepInExMod/InstantChargeShrine.BepInExMod.csproj" />
 </Solution>
